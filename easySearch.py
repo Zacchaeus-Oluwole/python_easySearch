@@ -12,20 +12,13 @@ dictv = {
             'zacchaeus': 'MY NAME, LOL...'
         }
 
+# get = input("Enter first and last letter:")
 get = input("Enter first and last letter:").split()
 first = get[0]
 last = get[1]
-numMin = get[-2]
-numMax = get[-1]
-vBag = []
+numMin = int(get[-2])
+numMax = int(get[-1])
 
 for l,k in dictv.items():
-    if l[0] == first and l[-1] == last and int(numMin) <= int(len(l)) and int(len(l)) <= int(numMax):
-        vBag.append(l)
-        vBag.append(k)
+    if l[0] == first and l[-1] == last and numMin <= len(l) and len(l) <= numMax:
         print(l,":",k)
-
-
-
-
-
